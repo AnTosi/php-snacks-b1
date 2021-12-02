@@ -56,14 +56,23 @@ $posts = [
 <body>
     <div>
 
-        <?php var_dump($posts) ?>
+        <?php var_dump($posts);
+            // echo array_keys($posts[1]);
+            // echo $posts[1];
+            // var_dump($posts['10/01/2019'])
+            // var_dump($posts['0']);
+            // non riesco  ad accedere alla chiave con la data, quindi uso ciclo for each
+        ?>
 
-        <?php for ($i=0; $i < count($posts); $i++) { ?>
+        <?php foreach ($posts as $post) { 
+            var_dump($post['array']);
+            ?>
             
 
             <?php 
 
-                echo array_keys($posts);
+                // echo array_keys($posts);
+                // echo $posts['10/01/2019'];
             ?>
 
         <?php } ?>
