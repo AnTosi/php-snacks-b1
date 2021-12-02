@@ -1,6 +1,8 @@
 <!-- Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
+<!-- googlare is_set -->
+
 <?php 
     $name = $_GET["name"];
     $mail = $_GET["mail"];
@@ -20,12 +22,12 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
     <form>
         <div>
             <label for="name">First Name</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" method="get">
         </div>
 
         <div>
             <label for="mail">eMail address</label>
-            <input type="text" id="mail" name="mail">
+            <input type="text" id="mail" name="mail" method="get">
         </div>
 
         <div>
@@ -34,19 +36,14 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
         </div>
 
         
-            <?php if (is_string($name) && strlen($name) > 3 && in_array('@', $mail) && in_array('.', $mail) && is_int($age)) { 
-                echo "<p> Accesso riuscito </p>";
-                } else {
-                    echo "<p> Accesso negato </p>";
+            <?php if (is_string($name) && strlen($name) > 3 && in_array('@', $mail) && in_array('.', $mail) && is_int($age)) { ?>
+                    <p> Accesso riuscito </p>
+                <?php } else { ?>
+                    <p> Accesso negato </p>
+              
 
-                }
-            
-   
- 
-                ?>
-
-        </p>
-            
+                <?php } ?>
+           
         
 
     </form>
