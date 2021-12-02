@@ -19,6 +19,7 @@ $divided_text = explode(".", $longtext);
     <title>Document</title>
 </head>
 <body>
+    <p style="border: 1px solid red; padding: 1rem;"> <?php echo $longtext ?> </p>
     <?php for ($i=0; $i < count($divided_text); $i++) { ?>
         <p style="border: 1px solid black; padding: 1rem;"> <?php echo $divided_text[$i] ?> </p>
     <?php } ?> 
