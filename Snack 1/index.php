@@ -5,54 +5,66 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php 
 
-$calendarioA1 = [
-    'giornata2' => [
+$giornata2 = [
         'partita' => [
-            [
-                'squadre' => ["AX Armani Exchange Milano", "Virtus Segafredo Bologna"],
-                'risultato' => ['55', '60'],
+            [ 
+                'squadra_casa' => 'AX Armani Exchange Milano',
+                'squadra_ospite' => 'Virtus Segafredo Bologna',
+                'punteggio_casa' => 55,
+                'punteggio_ospite' => 60
             ],
 
-            [
-                'squadre' => ["Dolomiti Energia Trentino", "Happy Casa Brindisi"],
-                'risultato' => ['58', '54'],
-            ],
-            
-            [
-                'squadre' => ["GeVi Napoli", "Umana Reyer Venezia"],
-                'risultato' => ['65', '58'],
+            [ 
+                'squadra_casa' => 'Dolomiti Energia Trentino',
+                'squadra_ospite' => 'Happy Casa Brindisi',
+                'punteggio_casa' => 63,
+                'punteggio_ospite' => 59
             ],
 
-            [
-                'squadre' => ["Umana Reyer Venezia", "Allianz Pallacanestro Trieste"],
-                'risultato' => ['65', '58'],
+            [ 
+                'squadra_casa' => 'GeVi Napoli',
+                'squadra_ospite' => 'Umana Reyer Venezia',
+                'punteggio_casa' => 68,
+                'punteggio_ospite' => 76
             ],
 
-            [
-                'squadre' => ["Nutribullet Treviso Basket", "Unahotels Reggio Emilia"],
-                'risultato' => ['65', '58'],
+            [ 
+                'squadra_casa' => 'Carpegna Prosciutto Pesaro',
+                'squadra_ospite' => 'Allianz Pallacanestro Trieste',
+                'punteggio_casa' => 72,
+                'punteggio_ospite' => 95
             ],
 
-            [
-                'squadre' => ["Bertram Derthona Tortona", "Vanoli Basket Cremona"],
-                'risultato' => ['65', '58'],
+            [ 
+                'squadra_casa' => 'Nutribullet Treviso Basket',
+                'squadra_ospite' => 'Unahotels Reggio Emilia',
+                'punteggio_casa' => 62,
+                'punteggio_ospite' => 67
             ],
 
-            [
-                'squadre' => ["Germani Brescia", "Openjobmetis Varese"],
-                'risultato' => ['65', '58'],
+            [ 
+                'squadra_casa' => 'Bertram Derthona Tortona',
+                'squadra_ospite' => 'Vanoli Basket Cremona',
+                'punteggio_casa' => 65,
+                'punteggio_ospite' => 60
             ],
 
-            [
-                'squadre' => ["Banco di Sardegna Sassari", "Fortitudo Bologna"],
-                'risultato' => ['65', '58'],
+            [ 
+                'squadra_casa' => 'Germani Brescia',
+                'squadra_ospite' => 'Openjobmetis Varese',
+                'punteggio_casa' => 58,
+                'punteggio_ospite' => 67
             ],
-            	
+
+            [ 
+                'squadra_casa' => 'Banco di Sardegna Sassari',
+                'squadra_ospite' => 'Fortitudo Bologna',
+                'punteggio_casa' => 52,
+                'punteggio_ospite' => 79
+            ],
 
         ]   
-
     ]
-]
 
 ?>
 
@@ -67,11 +79,11 @@ $calendarioA1 = [
 <body>
     <div>
         <ul>
-            <?php for ($i, $i < count($calendarioA1['giornata2'['partita']], $i++) { ?>
+            <?php for ($i, $i < count($giornata2['']['partita'], $i++) { ?>
                 <li>
-                    <?php echo $calendarioA1['giornata2'['partita[$i]'['squadre']]]
+                    <?php echo $gioranta2['partita'][$i]]['squadre']; ?>
                 </li>
-            }
+            <?php } ?>
 
         </ul>
     </div>
