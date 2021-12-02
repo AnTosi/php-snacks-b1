@@ -66,7 +66,8 @@ $posts = [
 
         <?php foreach ($posts as $post) { 
             // var_dump($post);
-            echo $post
+            echo $post;
+            echo array_keys($post);
             ?>
             
 
