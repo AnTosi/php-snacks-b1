@@ -19,24 +19,20 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <div>
+    <form name="form" action="./index.php" method="get">
             <label for="name">First Name</label>
-            <input type="text" id="name" name="name" method="get">
-        </div>
+            <input type="text" id="name" name="name">
 
-        <div>
             <label for="mail">eMail address</label>
-            <input type="text" id="mail" name="mail" method="get">
-        </div>
+            <input type="text" id="mail" name="mail">
 
-        <div>
             <label for="age">Age</label>
             <input type="text" id="age" name="age">
-        </div>
 
-        
-            <?php if (is_string($name) && strlen($name) > 3 && in_array('@', $mail) && in_array('.', $mail) && is_int($age)) { ?>
+            <input type="submit">
+    </form>
+
+    <?php if (is_string($name) && strlen($name) > 3 && strpos($mail, "@") && strpos($mail, ".") && is_numeric($age)) { ?>
                     <p> Accesso riuscito </p>
                 <?php } else { ?>
                     <p> Accesso negato </p>
@@ -46,6 +42,6 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
            
         
 
-    </form>
+    
 </body>
 </html>
