@@ -33,9 +33,19 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
             <input type="text" id="age" name="age">
         </div>
 
-        <?php if ($name) {
-            # code...
-        }
+        <?php if (is_string($name) && strlen($name) > 3 && in_array('@', $mail) && in_array('.', $mail) && is_int($age)) { 
+            echo <p>
+                Accesso riuscito
+            </p>
+        
+            <p>
+                Accesso negato
+            </p>
+
+            ?>
+            
+        
+
     </form>
 </body>
 </html>
