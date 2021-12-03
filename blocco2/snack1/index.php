@@ -77,14 +77,14 @@ $trueads = [];
 
         // var_dump($trueads);
         $this_ad_index = rand(0, count($trueads) - 1);
-        var_dump ($this_ad_index);
+        // var_dump ($this_ad_index);
 
         for ($i=0; $i < count($trueads); $i++) { 
             $this_ad = $trueads[$i];
             // var_dump($this_ad);
             if ($i == $this_ad_index) { 
-                var_dump($this_ad); ?>
-                <a href="<?php echo $this_ad['link'] ?>"><img src="<?php echo $this_ad['image_path'] ?>" alt=""></a>
+                // var_dump($this_ad); ?>
+                <a href="<?php echo $this_ad['link'] ?>"><img src="<?php echo $this_ad['image_path'] ?>" alt="" style="width: 400px;"></a>
             <?php } ?>
         <?php } ?>
 
