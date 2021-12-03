@@ -34,8 +34,7 @@ $ads = [
 
 ];
 
-$trueads= [];
-
+$trueads = [];
 // function validate_ad($ads) {
 //     foreach ($ads as $key => $ad) {
 //         if ($ad['is_active'] == true) {
@@ -72,16 +71,24 @@ $trueads= [];
         foreach ($ads as $key => $ad) {
             if ($ad['is_active'] == true) {
                 $trueads[] = $ad;
+                // var_dump($trueads);
             }
-            foreach ($trueads as $key => $truead) {
-                
-                $this_ad = rand(0, count($trueads));
-                var_dump($this_ad);
-                if ($key == $this_ad) { ?> 
-                   <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRniLfGdFLxVOUoEwYC9WeRIrfZInB74_80IV8yMnANx3HTZYoQ?' alt=""> 
-                <?php } 
-            } 
-        } ?>
+        }
+
+        // var_dump($trueads);
+        $this_ad_index = rand(0, count($trueads) - 1);
+        var_dump ($this_ad_index);
+
+        for ($i=0; $i < count($trueads); $i++) { 
+            $this_ad = $trueads[$i];
+            // var_dump($this_ad);
+            if ($i == $this_ad_index) { 
+                var_dump($this_ad); ?>
+                <a href="<?php echo $this_ad['link'] ?>"><img src="<?php echo $this_ad['image_path'] ?>" alt=""></a>
+            <?php } ?>
+        <?php } ?>
+
+
 
     </div>
 </body>
