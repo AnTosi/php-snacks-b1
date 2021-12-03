@@ -8,7 +8,7 @@ $invitedlist = [
     'chandra'
 ];
 
-$queryname = $_GET('name');
+$queryname = strtolower($_GET['name']);
 ?>
 
 <!DOCTYPE html>
@@ -21,14 +21,16 @@ $queryname = $_GET('name');
 </head>
 <body>
     <h4>
-        <?php var_dump($queryname);
-            var_dump($_GET('name'));
-        ?>
-        <!-- <?php if (in_array($queryname, $invitedlist)) { ?>
+        <!-- cane -->
+        <!-- <?php 
+            // var_dump($queryname);
+            var_dump($queryname);
+        ?> -->
+        <?php if (in_array($queryname, $invitedlist)) { ?>
             OK
         <?php } else { ?>
             KO
-        <?php } ?> -->
+        <?php } ?>
     </h4>
 </body>
 </html>
