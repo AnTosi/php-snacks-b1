@@ -8,6 +8,8 @@ $invitedlist = [
     'chandra'
 ];
 
+//didn't work because of $_GET() instead of $_GET[]
+
 $queryname = strtolower($_GET['name']);
 ?>
 

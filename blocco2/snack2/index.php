@@ -18,10 +18,9 @@ Creiamo due pagine php. La prima farà una chiamata GET alla seconda attraverso 
     <form name="form" action="./page2.php" method="get">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
-            <input type="submit">
+            <!-- <input type="submit"> -->
     </form>
 
-    <?php var_dump($queryname) ?>
 </body>
 </html>
 
