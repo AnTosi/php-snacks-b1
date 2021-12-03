@@ -36,13 +36,23 @@ $ads = [
 
 $trueads= [];
 
-function validate_ad ($ads) {
-    for ($i=0; $i < count($ads); $i++) { 
-        if ($ads[$i]['is_active'] == true) {
-            $trueads[] = $ads[$i];
-            }
-        }
-};
+// function validate_ad($ads) {
+//     foreach ($ads as $key => $ad) {
+//         if ($ad['is_active'] == true) {
+//             $trueads[] = $ad;
+//         }
+//     } 
+//     // var_dump($trueads);
+// }
+    
+    
+    
+//     ($i=0; $i < count($ads); $i++) { 
+//         if ($ads[$i]['is_active'] == true) {
+//             $trueads[] = $ads[$i];
+//             }
+//         }
+// };
 
 ?>
 
@@ -56,12 +66,21 @@ function validate_ad ($ads) {
 </head>
 <body>
     <div>
-        <?php validate_ad($ads);
-        foreach ($trueads as $key => $value) {
-            $this_ad = rand(0, count($trueads));
-            if ($key == $this_ad) { ?> 
-               <img src="<?php echo $value['image_path']?>" alt=""> 
-            <?php } 
+        <?php 
+        // var_dump($trueads);
+        // validate_ad($ads);
+        foreach ($ads as $key => $ad) {
+            if ($ad['is_active'] == true) {
+                $trueads[] = $ad;
+            }
+            foreach ($trueads as $key => $truead) {
+                
+                $this_ad = rand(0, count($trueads));
+                var_dump($this_ad);
+                if ($key == $this_ad) { ?> 
+                   <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRniLfGdFLxVOUoEwYC9WeRIrfZInB74_80IV8yMnANx3HTZYoQ?' alt=""> 
+                <?php } 
+            } 
         } ?>
 
     </div>
