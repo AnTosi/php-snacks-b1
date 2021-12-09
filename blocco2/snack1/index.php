@@ -53,6 +53,13 @@ $trueads = [];
 //         }
 // };
 
+
+/*come l'ha fatta Fabio:
+//$activeAds = array_filter($ads, function ($element) {
+    return $element['is_active'] == TRUE;
+});
+
+*/
 ?>
 
 <!DOCTYPE html>
@@ -92,4 +99,9 @@ $trueads = [];
 
     </div>
 </body>
+
+
+
+
+
 </html>
